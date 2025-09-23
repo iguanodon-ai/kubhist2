@@ -9,6 +9,9 @@ The resulting dataset is available on the huggingface hub at https://huggingface
 1. `poetry run python main.py get-data`
 2. `poetry run python main.py process-data`
 
+If you have lots of CPU (and by extension disk space), you can use the `--n-cores NUMBER` here to specify how many threads you want and bypass the default (default is how many cores you have minus 4).
+
+
 ### Short description
 
 In a nutshell, this hugginface dataset version offers:
