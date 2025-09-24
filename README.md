@@ -4,6 +4,8 @@ This repo contains scripts to download and transform the Språkbanken Text (SBX)
 
 The resulting dataset is available on the huggingface hub at https://huggingface.co/datasets/iguanodon-ai/kubhist2.
 
+This repo contains code originally written in May 2023, and cleaned/updated today (commit date).
+
 ### Steps
 
 1. `poetry run python main.py get-data`
