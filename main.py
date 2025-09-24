@@ -15,12 +15,47 @@ app = Typer()
 
 @app.command()
 def get_data(n_cores: Optional[int] = None):
+    """
+    Gets data by downloading from specified URL to a local directory.
+
+    This command uses the dataget class to fetch links and download data.
+
+    Args:
+        n_cores: Optional[int]
+            Number of CPU cores to use for parallel downloading.
+            If None, all available cores minus 4 will be used.
+
+    Example:
+        $ python main.py get-data
+        $ python main.py get-data --n-cores 4
+"""
     datagetter = dataget(URL, DATA, n_cores)
     datagetter.get_links()
     datagetter.download()
 
 @app.command()
 def process_data(n_cores: Optional[int] = None):
+    """
+    Process XML data files by decade using parallel processing.
+    
+    This function initializes an XML parser and processes data for each decade.
+    It combines temporary files into a single text file for each decade and 
+    removes the temporary files afterward. If a decade's file already exists,
+    it skips processing for that decade.
+    
+    Args:
+        n_cores (Optional[int]): Number of CPU cores to use for parallel processing.
+            If None, all available cores minus 4 will be used.
+    
+    Returns:
+        None
+    
+    Side effects:
+        - Creates decade directories under TEXT directory if they don't exist
+        - Combines temporary files into a single decade file
+        - Deletes temporary files after processing
+        - Prints status messages about skipped decades
+    """
     xmlparserr = xmlparser(DATA, TEXT, n_cores)
     for decade in xmlparserr.decades:
         xmlparserr.process_decade(decade)
