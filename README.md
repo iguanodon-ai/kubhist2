@@ -42,3 +42,27 @@ ds_1800_1820 = concatenate_datasets([
 ### Acknowledgments
 
 Many thanks go to Språkbanken Text for creating and curating this resource.
+
+
+
+# License and contact
+
+`<a href="https://iguanodon.ai"><img src="./img/iguanodon.ai.png" width="125" height="125" align="right" />``</a>`
+
+This code was written by Simon Hengchen ([https://iguanodon.ai](https://iguanodon.ai)). The code is made available to the public [under the permissive CC BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/). If you use the data that running this script provides, include the following citations in your paper:
+
+```bibtex
+@misc{kubhist,
+  doi = {10.23695/h7qd-bj40},
+  url = {https://spraakbanken.gu.se/resurser/kubhist},
+  author = {{Språkbanken Text}},
+  keywords = {Language Technology (Computational Linguistics)},
+  language = {swe},
+  title = {Kubhist},
+  publisher = {Språkbanken Text},
+  year = {2025}
+}
+```
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
